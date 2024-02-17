@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrintX</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="js/external.js"></script>
+    <!-- internal css -->
+    <style>
+      .navbar {
+        padding: 2%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        color: white;
+        text-decoration: none;
+      }
+      .navbar:hover {
+        color: gray;
+      }
+      .logo {
+        margin-top: -1.7%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <nav align="right">
+        <div>
+          <a href="home.html">
+            <img
+              src="images/logo2.png"
+              alt="logo"
+              align="left"
+              height="auto"
+              width="100px"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="home.html" class="navbar">Home</a>
+          <a href="html/product.html" class="navbar">Products</a>
+          <a href="html/Blog.html" class="navbar">Blog</a>
+          <a href="html/research.html" class="navbar">Research</a>
+          <a href="html/aboutus.html" class="navbar">About Us</a>
+        </div>
+      </nav>
+    </header>
+    <div id="slideshow" align="center">
+      <img src="images/Slide1.jpg" width="1000px" height="auto" id="slide" />
+      <!-- internal js -->
+      <script>
+        var photos = [
+          "images/Slide1.jpg",
+          "images/Slide2.jpg",
+          "images/Slide3.jpg",
+        ];
+        var i = 0;
+        function imgSlide() {
+          document.getElementById("slide").src = photos[i];
+          if (i < photos.length - 1) {
+            i++;
+          } else {
+            i = 0;
+          }
+        }
+        setInterval(imgSlide, 5000);
+      </script>
+      <br /><br />
+    </div>
+    <!-- sontainer for picture -->
+    <section id="deals-container" align="center">
+      <a href="#" target="_blank" style="text-decoration: none"
+        ><h1 class="dotm">Deals of the Month</h1></a
+      >
+    </section>
+    <br />
+    <!-- container for product page link -->
+    <div id="container">
+      <div id="box1">
+        <a href="#" target="_blank"
+          ><img
+            src="images/megatankprinter.png"
+            width="250px"
+            height="auto"
+            style="margin-left: 70px; margin-bottom: -15px"
+            class="products-image1"
+        /></a>
+        <a href="#" target="blank" style="text-decoration: none"
+          ><p align="center" class="products-name">PIXMA G3730</p></a
+        >
+        <a href="#" target="blank" style="text-decoration: none; color: #21295c"
+          ><p align="center" class="delivery">Free Delivery</p></a
+        >
+        <a href="#" target="blank" style="text-decoration: none"
+          ><p align="center" class="discounted-price">Rs 14,000</p></a
+        >
+        <p align="center" class="actual-price"><del>Rs 20,000</del></p>
+        <button align="center" class="add-to-cart" onclick="addToCart()">
+          Add To Cart
+        </button>
+      </div>
+      <div id="box2">
+        <a href="#" target="_blank"
+          ><img
+            src="images/Epson Expression Photo XP-860.png"
+            width="200px"
+            height="auto"
+            style="margin-left: 103px; margin-top: 60px; margin-bottom: 12px"
+            class="products-image2"
+        /></a>
+        <a href="#" target="blank" style="text-decoration: none"
+          ><p align="center" class="products-name">
+            Epson Expression Photo XP-860
+          </p></a
+        >
+        <a href="#" target="blank" style="text-decoration: none; color: #21295c"
+          ><p align="center" class="delivery">Free Delivery</p></a
+        >
+        <a href="#" target="blank" style="text-decoration: none"
+          ><p align="center" class="discounted-price">Rs 12,000</p></a
+        >
+        <p align="center" class="actual-price"><del>Rs 15,000</del></p>
+        <button align="center" class="add-to-cart" onclick="addToCart()">
+          Add To Cart
+        </button>
+      </div>
+      <div id="box3">
+        <a href="#" target="_blank"
+          ><img
+            src="images/Brother MFC-L2750DW.webp"
+            width="220px"
+            height="auto"
+            style="margin-left: 90px; margin-bottom: -15px"
+            class="products-image3"
+        /></a>
+        <a href="#" target="blank" style="text-decoration: none"
+          ><p align="center" class="products-name">Brother MFC-L2750DW</p></a
+        >
+        <a href="#" target="blank" style="text-decoration: none; color: #21295c"
+          ><p align="center" class="delivery">Free Delivery</p></a
+        >
+        <a href="#" target="blank" style="text-decoration: none"
+          ><p align="center" class="discounted-price">Rs 12,000</p></a
+        >
+        <p align="center" class="actual-price"><del>Rs 15,000</del></p>
+        <button align="center" class="add-to-cart" onclick="addToCart()">
+          Add To Cart
+        </button>
+      </div>
+    </div>
+    <br />
+    <button class="show-more">
+      <a
+        class="more1"
+        href="html/product.html"
+        target="_blank"
+        style="text-decoration: none"
+        >Show More</a
+      >
+    </button>
+    <br /><br />
+    <!-- link to Blog page -->
+    <a class="blog-title" href="html/Blog.html" target="_blank">
+      <div align="center" id="our-blog-container">Our Blogs</div>
+    </a>
+    <div id="container2">
+      <div id="img1">
+        <a href="html/history.html" target="_blank"
+          ><img
+            src="images/history-of-print.jpg"
+            width="300px"
+            height="auto"
+            style="border: 1px solid; border-radius: 20px"
+            class="blog-image1"
+        /></a>
+        <br /><br />
+        <a href="html/history.html" target="_blank" style="text-decoration: none"
+          ><p align="center" class="blog-name">How did Printing start?</p></a
+        >
+      </div>
+      <div id="img2">
+        <a href="html/evolution.html" target="_blank"
+          ><img
+            src="images/evolution.jpg"
+            width="300px"
+            height="auto"
+            style="border: 1px solid; border-radius: 20px"
+            class="blog-image2"
+        /></a>
+        <br /><br />
+        <a href="html/evolution.html" target="_blank" style="text-decoration: none"
+          ><p align="center" class="blog-name">How did Printers evolved?</p></a
+        >
+      </div>
+      <div id="img3">
+        <a href="html/technology.html" target="_blank"
+          ><img
+            src="images/technology.jpg"
+            width="300px"
+            height="auto"
+            style="border: 1px solid; border-radius: 20px"
+            class="blog-image3"
+        /></a>
+        <br /><br />
+        <a href="html/technology.html" target="_blank" style="text-decoration: none"
+          ><p align="center" class="blog-name">
+            How has technology affected <br />daily life and business
+          </p></a
+        >
+      </div>
+    </div>
+    <!-- reviews -->
+    <section id="or-container" align="center">
+      <h3 class="or">Our Reviews</h3>
+    </section>
+    <br />
+    <div id="container3">
+      <div id="box4">
+        <img
+          src="images/fivestar.webp"
+          width="100px"
+          height="auto"
+          style="margin-left: 70px; margin-bottom: -15px"
+          class="products-image1"
+        />
+        <p align="left" class="customer-name">Nitik Shrestha</p>
+        <p align="center" class="review-paragraph">
+          Installation was very much easy because of their customer service.
+          Best customer service I have ever experienced.
+        </p>
+        <button class="like-review1" onclick="like()">Like The Review</button>
+      </div>
+      <div id="box5">
+        <img
+          src="images/fivestar.webp"
+          width="100px"
+          height="auto"
+          style="margin-left: 70px; margin-bottom: -15px"
+          class="products-image2"
+        />
+        <p align="left" class="customer-name">Karmee Sthapit</p>
+        <p align="center" class="review-paragraph">
+          Excellent quality at a very good price. I am very happy with this
+          purchase.
+        </p>
+        <button class="like-review2" onclick="like()">Like The Review</button>
+      </div>
+      <div id="box6">
+        <img
+          src="images/fivestar.webp"
+          width="100px"
+          height="auto"
+          style="margin-left: 70px; margin-bottom: -15px"
+          class="products-image3"
+        />
+        <p align="left" class="customer-name">Rohan Upreti</p>
+        <p align="center" class="review-paragraph">
+          This printer is excellent for home/small office use. It was seal
+          packed and delivered in excellent condition. You can easily order this
+          printer without worrying about anything.
+        </p>
+        <button class="like-review3" onclick="like()">Like The Review</button>
+      </div>
+    </div>
+    <!-- footer -->
+
+    <div
+      class="footer"
+      style="
+        background-color: #21295c;
+        height: 250px;
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-evenly;
+      "
+    >
+      <div class="footer_icon">
+        <span class="title">Follow us :</span>
+        <a><img src="images/instagram.png" /></a>
+        <a><img src="images/facebook.jpg" /></a>
+        <a><img src="images/twitter.jpg" /></a>
+      </div>
+      <div class="footer_text">
+        <span class="title">Overview</span>
+        <a href="home.html">Home</a>
+        <a href="html/product.html">Products</a>
+        <a href="html/Blog.html">Blog</a>
+        <a href="html/research.html">Research</a>
+        <a href="html/aboutus.html">About Us</a>
+      </div>
+      <div class="footer_products">
+        <span class="title">Products</span>
+        <a href="#">Laser</a>
+        <a href="#">Dot-Matrix</a>
+        <a href="#">Thermal</a>
+        <a href="#">Inkjet</a>
+      </div>
+      <div class="Contact">
+        <span class="title">Find Us</span>
+        <div class="contactdetails">
+          <p
+            style="
+              color: white;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+            "
+          >
+            061 - 528123
+          </p>
+          <a
+            href="#"
+            style="
+              color: white;
+              text-decoration: none;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+            "
+            >printX@gmail.com</a
+          >
+          <p
+            style="
+              color: white;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+            "
+          >
+            Matepani, Pokhara - 12
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
